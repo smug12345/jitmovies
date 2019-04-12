@@ -3,6 +3,7 @@ import "../App.css";
 import Header from "./Header";
 import Movie from "./Movie";
 import Search from "./Search";
+import logo from './tinsuk.png';
 const MOVIE_API_URL = "https://www.omdbapi.com/?s=man&apikey=thewdb";
 const initialState = {
   loading: true,
@@ -69,6 +70,7 @@ const { movies, errorMessage, loading } = state;
 return (
     <div className="App">
       <Header text="Movie Catalog" />
+      <img src={logo} width="auto" height="50" />
       <Search search={search} />
       <p className="App-intro">Remember, you can't stream movies </p>
       <div className="movies">
